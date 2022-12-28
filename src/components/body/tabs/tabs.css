@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../../../assets/fonts/Poppins-Regular.ttf);
+  }
+
+  * {
+    color: white;
+    font-family: Poppins;
+  }
+
+
+
+.tabs-container {
+    display: flex;
+    width:100%;
+    justify-content: center;
+    position:relative;
+    border:1px solid #329DFF
+}
+
+.tabs-inner-container {
+    position: absolute;
+    transform: translateY(-50px);
+}

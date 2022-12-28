@@ -8,6 +8,10 @@ import connected from '../../assets/images/connected.png'
 
 
 function Profile() {
+   
+
+
+
     return (
         <div className="profile-container">
            <div className="profile-pic-container">
@@ -15,8 +19,8 @@ function Profile() {
            </div>
            <div className="info-container">
             <div className="info-line-container">
-            <span style={{color:'white', display:'inline-block', marginRight:'6px'}}>USERNAME</span>
-             <img style={{width:'2.1vw'}} src={tick}></img>
+            <span style={{color:'white', display:'inline-block', marginRight:'1vw'}}>USERNAME</span>
+             <img style={{width:'2.1vw', transform: 'translateY(0.3vw)'}} src={tick}></img>
             </div>
             <div className="info-line-container">
                 <span className="online-info">0xb42...3b3c</span>
@@ -48,8 +52,10 @@ function Profile() {
                 <span className="quantity">$58.99K</span>
                 <span className="info">Total Sales Volume</span>
              </div>
-
            </div>
+          <div style={{position:'absolute',right: '6%', top: '38%'}}>
+          <img style={{width:'1.2vw'}} src="/images/share.png"></img>
+          </div>
         </div>
     )
 }

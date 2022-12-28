@@ -12,6 +12,7 @@
     background-color: #051F36;
     height: 20vw;
     width: 100%;
+    border-top:1px solid #329DFF
 
 }
 
@@ -27,8 +28,8 @@
     flex-direction: column;
     width: 40%;
     position: absolute;
-    left: 23%;
-    top: 39%;
+    left: 22%;
+    top:38.5%;
     font-weight: 800;
     font-family: Poppins;
     font-size: 2.4vw;
@@ -61,7 +62,7 @@
     display: flex;
     position: absolute;
     right: 5%;
-    top:65%
+    top:55%
 
 }
 
@@ -69,7 +70,7 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    margin: 0 1.8vw;
+    margin: 0 1vw;
 }
 
 
@@ -79,7 +80,7 @@
     line-height: 22px;
     letter-spacing: -0.4099999964237213px;
     font-weight: 500;
-    font-size: 2vw;
+    font-size: 1.8vw;
 }
 
 
