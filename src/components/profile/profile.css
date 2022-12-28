@@ -1,0 +1,93 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../../assets/fonts/Poppins-Regular.ttf);
+}
+
+* {
+    color: white
+}
+
+
+.profile-container {
+    background-color: #051F36;
+    height: 20vw;
+    width: 100%;
+
+}
+
+.profile-pic-container {
+    position: absolute;
+    z-index: 1000;
+    left: 10%;
+    top: 27%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    position: absolute;
+    left: 23%;
+    top: 39%;
+    font-weight: 800;
+    font-family: Poppins;
+    font-size: 2.4vw;
+    letter-spacing: -0.4099999964237213px;
+    text-align: left;
+    height: 10vw;
+
+}
+
+.info-line-container {
+    height: 25%;
+}
+
+
+.online-info {
+    font-size: 1vw;
+    font-weight: 400;
+
+}
+
+
+
+.online-info-b {
+    font-size: 1vw;
+    font-weight: 400;
+    font-weight: 800;
+}
+
+.market-info-container {
+    display: flex;
+    position: absolute;
+    right: 5%;
+    top:65%
+
+}
+
+.info-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 0 1.8vw;
+}
+
+
+.quantity {
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.4099999964237213px;
+    font-weight: 500;
+    font-size: 2vw;
+}
+
+
+.info {
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.4099999964237213px;
+    text-align: right;
+    font-size: 0.8vw;
+}
