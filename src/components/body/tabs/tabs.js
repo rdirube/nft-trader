@@ -22,13 +22,13 @@ function Table() {
         <div className="tabs-container">
             <div className="tabs-inner-container">
             <Tabs aria-label="basic tabs example" value={actualValue} onChange={handleChange} textColor="white"
-               indicatorColor="white">
+              TabIndicatorProps={{style: {background:'white'}}}>
                 <Tab label="Items" value="Items" style={{marginRight:'3.5vw'}} />
                 <Tab label="Stats" value="Stats" />
             </Tabs>
             </div>  
             {actualValue === 'Items' && <Items />}
-        {actualValue === 'Stats' && <Stats />}    
+            {actualValue === 'Stats' && <Stats />}    
         </div>
         
      </>

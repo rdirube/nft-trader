@@ -26,7 +26,7 @@ function Header() {
               </div>
             </div>
             <div style={{display:'flex', transform:'translateX(-30%)'}}>
-                <a className="header-opt">Marketplace</a>
+                <a className="header-opt" >Marketplace</a>
                 <a className="header-opt">Ranking</a>
                 <a className="header-opt">Blog</a>
             </div>
@@ -38,7 +38,7 @@ function Header() {
             </div>
         </div>
          <div style={{display:'flex', justifyContent:'center', backgroundColor:'#073662'}}>
-            <img style={{width:'90%'}} src={monkeysHeader}></img>
+            <img style={{width:'94%'}} src={monkeysHeader}></img>
          </div>
          </div>
        
