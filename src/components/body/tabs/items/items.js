@@ -4,23 +4,20 @@ import refresh from '../../../../assets/images/refresh.png'
 import tick from '../../../../assets/images/tick.png'
 import { useEffect } from "react";
 import monkeysAvaiable from "./itemsList";
-import { mockComponent } from "react-dom/test-utils";
-
-
+import pc from '../../../../assets/images/monkey_1.png'
 
 
 
 
 function Items() {
 
-
-    const [monkeysToShow , setMonkeysToShow]= useState([])
-    let monkeysLoaded = false;
+    const [monkeysToShow, setMonkeysToShow] = useState([])
 
     useEffect(() => {
         let monkeysModified = shuffleAndCutArray(monkeysAvaiable);
         setMonkeysToShow(monkeysModified)
-  }, []);
+    }, []);
+
 
 
     function shuffleAndCutArray(monkeysAvaiable) {
@@ -52,8 +49,8 @@ function Items() {
                 </div>
                 <div className="cards-f-container">
                     <div className="cards-container" > {
-                     monkeysToShow.map(monkey => {
-                        return (<div className="card-container">
+                        monkeysToShow.map(monkey => {
+                            return (<div className="card-container">
                                 <div className="card">
                                     <div className="card-img-container">
                                         <img className="img" src={monkey.picture}></img>
@@ -80,7 +77,7 @@ function Items() {
                             </div>);
                         })
                     }
-                    
+
                     </div>
                 </div>
             </div>

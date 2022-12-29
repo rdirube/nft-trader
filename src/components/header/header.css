@@ -36,6 +36,14 @@ color:white;
 }
 
 
+.searcher-container-h {
+    width:35%;
+    padding:2px;
+    display:flex;
+    justify-content:space-evenly;
+}
+
+
 .searcher {
     width:85%;
     background-color: #051F36;
@@ -53,9 +61,12 @@ color:white;
     font-family: Poppins;
     font-size: 12px;
     margin-right: 20%;
+    cursor: pointer;
 }
 
 .header-logo {
     width: 14px;
     margin-right: 15px;
+    cursor: pointer;
+
 }

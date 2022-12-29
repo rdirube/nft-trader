@@ -11,8 +11,9 @@
   background-image: url("../../../assets/images/brick-wall.png");
   width: 100%;
   height: 80vw;
-  border-top:1px solid #329DFF
-
+  border-top:1px solid #329DFF;
+  display:flex;
+  justify-content: center;
   
 
 }
@@ -29,21 +30,24 @@
 
 
 .buy-content {
-    display: grid;
-    grid-template-rows: 30 30 20 20;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     transform: translateY(4vw); 
     height: 10vw; 
+    width: 100%;
 }
 
 .buy-button {
     background-color:black;
-    width:80%;
+    width:55%;
     height:3vw;
     font-family: Poppins;
     font-weight: 600;
 }
 
 .button-container {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -51,6 +55,8 @@
 
 .buy-searcher {
     border:none;
+    background-color:#073662;
+    width:95%;
 }
 
 .buy-searcher:focus {
@@ -59,19 +65,26 @@
 
 .searcher-container {
     background-color:#073662;
-    width:100%;
+    padding: 8px 3px 5px 5px;
     border-bottom:1px solid white; 
     opacity:1;
-    transform: translateY(2vw);
+    transform: translateY(9vw);
+    position:absolute;
+    z-index: 2000;
+    display: flex;  
+    width: 15.4%;
 }
+
+.buy-searcher:focus  .searcher-container {  border-bottom:1px solid #329DFF;}
 
 
 .buy-options {
     font-family: Poppins;
-    transform: translateY(5vw);
+    transform: translateY(7vw);
     display: flex;
     justify-content: start;
     margin-bottom: 2.2vw;
+    width: 75%;
 }
 
 .buy-options:focus {

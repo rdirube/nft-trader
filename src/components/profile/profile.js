@@ -4,7 +4,7 @@ import testMonkey from '../../assets/images/test_monkey.png'
 import tick from '../../assets/images/tick.png'
 import copy from '../../assets/images/copy.png'
 import connected from '../../assets/images/connected.png'
-
+import share from '../../assets/images/share.png'
 
 
 function Profile() {
@@ -24,7 +24,7 @@ function Profile() {
             </div>
             <div className="info-line-container">
                 <span className="online-info">0xb42...3b3c</span>
-                <img src={copy} style={{width:'1vw', marginLeft:'5px'}}></img>
+                <img src={copy} style={{width:'1vw', marginLeft:'5px', cursor:'pointer'}}></img>
                 <img src={connected} style={{width:'1.5vw', marginLeft:'5px', transform:'translateY(0.7vw)'}}></img>
                 <span className="online-info">Online</span>
             </div>
@@ -54,7 +54,7 @@ function Profile() {
              </div>
            </div>
           <div style={{position:'absolute',right: '6%', top: '38%'}}>
-          <img style={{width:'1.2vw'}} src="/images/share.png"></img>
+          <img style={{width:'1.2vw', cursor:'pointer'}} src={share}></img>
           </div>
         </div>
     )

@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState} from "react";
 import "./header.css"
 import astronaut from '../../assets/images/astronaut.png'
 import cart from '../../assets/images/cart.png'
@@ -9,6 +9,9 @@ import monkeysHeader from '../../assets/images/header_monkeys.png'
 
 
 function Header() {
+
+    const [searchFocusState, searchFocusHandler] = useState(false);
+
     return (
         <div className="complete-header-container">
          <div className="header-container">
@@ -16,10 +19,10 @@ function Header() {
             <div>
                 <span className="trader-title">NFT TRADER</span>
             </div>
-            <div style={{width:'35%', padding:'2px', borderBottom:'1px solid #FFFFFF', display:'flex', justifyContent:'space-evenly'}}>
-              <input class="searcher" type='text' placeholder="Search items, collections, and accounts"></input>
-              <div style={{width:'5%', display:'inline-block'}}>
-              <img src={lupita}></img>
+            <div className="searcher-container-h" style={searchFocusState ? {borderBottom: '1px solid #329DFF'} : {borderBottom: '1px solid #FFFFFF'}}>
+              <input className="searcher" onBlur={() => searchFocusHandler(false)} onFocus={() => searchFocusHandler(true)}  type='text' placeholder="Search items, collections, and accounts"></input>
+              <div style={{width:'5%', display:'inline-block', cursor:'pointer'}}>
+              <img src={lupita} ></img>
               </div>
             </div>
             <div style={{display:'flex', transform:'translateX(-30%)'}}>
