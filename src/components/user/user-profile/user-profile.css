@@ -1,0 +1,97 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../../../assets/fonts/Poppins-Regular.ttf);
+  }
+
+
+
+.profile-user-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.profile-pic-container {
+    position: absolute;
+    z-index: 1000;
+    left: 10%;
+    top: 27%;
+}
+
+
+.profile-part-1 {
+    width: 100%;
+    height:11vw;
+    background-color: #051F36;
+    border-top: 1px solid #329DFF;
+    border-bottom: 1px solid #329DFF ;
+}
+
+
+.profile-part-1-info {
+    transform: translate(21vw,0.8vw);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.username {
+    font-size: 2vw;
+    font-family: Poppins;
+    font-weight: 800;
+}
+
+.profile-part-2 {
+    display: flex;
+    background-color: rgb(7, 54, 98)
+    ;
+    width: 100%;
+    height:9vw;
+    border-bottom:  1px solid #329DFF ;
+    align-items: center;
+}
+
+.list-option {
+    background-color: #073662;
+    border:none;
+    width:9vw;  
+    color:white;
+    font-family: Poppins;
+    font-size: 1vw;
+    margin-right: 4vw;
+}
+
+.search-container-user{
+ width:60%;
+ display: flex;
+ justify-content: end;
+ align-items: center;
+}
+
+.searcher-container-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 70%;
+    height: 2.8vw;
+}
+
+.user-searcher {
+    border:none;
+    width:90%;
+    color:black
+}
+
+.user-searcher:focus {
+    outline-width: 0;
+}
+
+
+.update-time-container {
+    display: flex;
+    width:40%;
+    justify-content: end;
+
+}

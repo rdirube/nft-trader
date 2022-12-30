@@ -5,12 +5,14 @@ import Table from './tabs/tabs'
 
 
 function Body() {
-    return (
-        <div className="body-container">
-          <Buy></Buy>
-          <Table></Table>
-        </div>
-    )
+  return (
+    <div className="body-container">
+      <Buy></Buy>
+      <Table></Table>
+
+    </div>
+
+  )
 }
 
 
