@@ -33,6 +33,7 @@
     transform: translate(21vw,0.8vw);
     display: flex;
     flex-direction: column;
+    width: 80%;
 }
 
 

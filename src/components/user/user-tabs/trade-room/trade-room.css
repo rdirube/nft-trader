@@ -1,12 +1,18 @@
 @font-face {
     font-family: Poppins;
     src: url(../../../../assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Pixeled;
+    src: url(../../../../assets/fonts/Pixeled.ttf);
   }
 
-  * {
+
+* {
     color: white;
     font-family: Poppins;
-  }
+}
 
 
 
@@ -17,6 +23,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    background-color: #15436d    ;
 }
 
 
@@ -30,7 +37,7 @@
 
 .create-room-button-container {
     display: flex;
-    width:100%;
+    width: 100%;
 }
 
 
@@ -39,22 +46,24 @@
     height: 4vw;
     font-size: 1.3vw;
     background-color: black;
-    color:white;
-    border:none;
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 
 .trade-room-container {
-  margin:4vw 0;
-  width: 100%;
-  height:12vw;
-  background-color: blueviolet;
-  display:grid;
-  grid-template-columns: 35% 50% 15%;
+    margin: 4vw 0;
+    width: 100%;
+    height: 12vw;
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: 35% 50% 15%;
 }
 
 .trade-user-container {
-    height:100%;
+    height: 100%;
     background-color: #282828;
 }
 
@@ -67,14 +76,14 @@
 .trade-user-inner-container {
     height: 90%;
     width: 100%;
-    border-right: 1px solid white ;
+    border-right: 1px solid white;
 }
 
 
 .trade-user-inner-container {
     height: 85%;
     width: 100%;
-    border-right: 1px solid white ;
+    border-right: 1px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +101,7 @@
 
 .trade-user-image {
     width: 7vw;
-    height:7vw;
+    height: 7vw;
 }
 
 
@@ -105,15 +114,15 @@
 
 
 .exchange-container {
- background-color: #414141 ;
- display: flex;
- justify-content: center;
- align-items: center;
+    background-color: #414141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.exchange-inner-container{
-    width:90%;
+.exchange-inner-container {
+    width: 90%;
     height: 65%;
     display: grid;
     grid-template-columns: 42.5% 15% 42.5%;
@@ -123,7 +132,7 @@
 .exchange-nfts-container {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-template-rows:auto auto ;
+    grid-template-rows: auto auto;
 }
 
 
@@ -133,22 +142,123 @@
 }
 
 .enter-container {
-    background-color: #282828; 
+    background-color: #282828;
     display: flex;
     align-items: center;
-   }
+}
 
-   .enter-inner-container {
-     height:85%;
-     width: 100%;
-     border-left: 1px solid white;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-   }
+.enter-inner-container {
+    height: 85%;
+    width: 100%;
+    border-left: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
-   .enter-content-container {
-    height:80%;
-     width: 50%
-   }
+.enter-content-container {
+    height: 80%;
+    width: 50%;
+    cursor: pointer;
+}
+
+.full-chart-container {
+    position: absolute;
+    z-index:1500;
+    width: 100%;
+    height:160vw;
+    transform: translateY(-20vw);
+}
+
+
+.charton-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 0.66;
+    width: 100%;
+    height:100%;
+    z-index: 10000;
+    
+}
+
+
+.charton {
+    position: fixed;
+    top: 8%;
+    left: 33%;
+    width: 35vw;
+    height:21vw;
+    background-color: #181818;
+    z-index: 20000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.inner-charton {
+  width: 75%;
+  height:80%;
+  display: grid;
+  grid-template-rows: 30% 40% 30% ;
+  
+}
+
+
+.create-trade-room-title{
+    font-family: Pixeled;
+    font-size: 1.4vw;
+}
+
+
+.input-create-room-container {
+    background-color:#382E28;
+    display:flex;
+    justify-content:center;   
+    height:2.7vw;
+    border-bottom: 1px solid white;
+}
+
+.input-create-room{
+    background-color:#382E28 ;
+    border: none;
+    width:95%;
+}
+
+.input-create-room:focus {
+    outline-width: 0;
+}
+
+.create-room-options-container-outer{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(1vw);
+}
+
+.create-room-options-container {
+    width: 80%;
+    height:2vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.option-button {
+    width:7vw;
+    height: 2.5vw;
+    border:none;
+    cursor:pointer;
+}
+
+
+
+.x-charton {
+  font-family: Pixeled;
+  font-size: 1.2vw;
+}
+
