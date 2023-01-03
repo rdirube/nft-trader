@@ -28,7 +28,7 @@ function TradeRoomActive() {
             <div className="trade-table-outer-container">
                 <div className="trade-table-container">
                     <div className="trade-table-image-container">
-                        <img src={table} style={{ height: '90%' }}></img>
+                        <img src={table} style={{ height: '90%', width:'100%' }}></img>
                         <div className="nfts-table-container">
                             {
                                 inTableNftsConst.map((nft) => {
@@ -68,7 +68,7 @@ function TradeRoomActive() {
                     <div>
                     </div>
                     <div className="trade-table-image-container">
-                        <img src={table2} style={{ height: '90%' }}></img>
+                        <img src={table2} style={{ height: '90%' , width:'100%' }}></img>
                     </div>
                 </div>
                 <div className="trade-table-chat-container">

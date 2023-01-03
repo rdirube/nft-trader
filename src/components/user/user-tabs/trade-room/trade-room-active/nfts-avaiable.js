@@ -52,4 +52,4 @@ const avaiableNfts = [{
 // }]
 
 
-export default avaiableNfts;
+export default avaiableNfts ;

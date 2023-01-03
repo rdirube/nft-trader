@@ -13,7 +13,7 @@ function TradeUserPanel() {
 
     useEffect(() => {
         avaiableNftsSetter(avaiableNfts);
-     
+      
     }, []);
 
 
