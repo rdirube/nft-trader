@@ -3,7 +3,7 @@ import "./trade-room.css"
 import profile from '../../../../assets/images/user1_profile.png'
 import door from '../../../../assets/images/door.png'
 import { height } from "@mui/system"
-import TradeRoomActive from './trande-room-active/trade-room-active'
+import TradeRoomActive from './trade-room-active/trade-room-active'
 
 
 function TradeRoom() {
