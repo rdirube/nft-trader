@@ -14,7 +14,7 @@ function TradeRoom() {
 
     return (
         <div className="trade-rooms-outer-container">
-            {/* <div className="trade-rooms-container">
+            { !tradeRoomActiveOn &&  <div className="trade-rooms-container">
                 <div className="create-room-button-container">
                     <button className="create-room-button" onClick={() => createChartOn(true)}>Create Room +</button>
                 </div>
@@ -56,8 +56,7 @@ function TradeRoom() {
                         </div>
                     </div>
                 </div>
-            </div>
-            {createRoomChart &&
+                { createRoomChart &&
                 <div className="full-chart-container">
                     <div className="charton-container">
                     </div>
@@ -79,7 +78,7 @@ function TradeRoom() {
                             <div className="create-room-options-container-outer">
                                 <div className="create-room-options-container">
                                     <button class="option-button" onClick={() => createChartOn(false)} style={{ backgroundColor: 'red' }}>No</button>
-                                    <button class="option-button" style={{ backgroundColor: 'green' }}>Yes</button>
+                                    <button class="option-button" onClick={() => tradeRoomActiveSwitch(true)}  style={{ backgroundColor: 'green' }}>Yes</button>
                                 </div>
                             </div>
                         </div>
@@ -88,8 +87,13 @@ function TradeRoom() {
                         </div>
                     </div>
                 </div>
-            } */}
+              } 
+            </div>
+}
+           
+         {tradeRoomActiveOn && 
           <TradeRoomActive></TradeRoomActive>
+         } 
         </div>
 
     )

@@ -5,7 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import "./user-tabs.css"
 import TradeRoom from "./trade-room/trade-room";
-
+import UserItems from "./user-items/user-items";
 
 function UserTabs() {
 
@@ -33,7 +33,7 @@ function UserTabs() {
                 </div>
             </div>
             <div className="user-body-container">
-            {actualValue === 'Items' && <span>hola</span>}
+            {actualValue === 'Items' && <UserItems></UserItems>}
             {actualValue === 'Trade Rooms' && <TradeRoom></TradeRoom>}
             {actualValue === 'Trade Rooms' && <span>sol</span>}
             </div>

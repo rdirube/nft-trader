@@ -6,13 +6,13 @@ import tick from '../../../../../../assets/images/tick.png'
 import connected from '../../../../../../assets/images/connected.png'
 import monkey4 from '../../../../../../assets/images/monkey_4.png'
 
-function TradeUserPanel() {
+function TradeUserPanel(props) {
   
     const [avaiableNftsConst, avaiableNftsSetter] = useState([]);
-  
+
 
     useEffect(() => {
-        avaiableNftsSetter(avaiableNfts);
+        avaiableNftsSetter(props.cards);
       
     }, []);
 
@@ -23,7 +23,7 @@ function TradeUserPanel() {
         <div className="monkey-trade-active-user-outer">
             <div className="monkey-trade-active-user">
                 <div className="monkey-trade-active-user-image">
-                    <img style={{ width: '8vw', borderRadius: '50%' }} src={monkey}></img>
+                    <img style={{ width: '8vw', borderRadius: '50%' }} src={props.profilePic}></img>
                 </div>
                 <div className="monkey-trade-active-user-info">
                     <div>
@@ -52,7 +52,7 @@ function TradeUserPanel() {
                                     <div className="monkey-active-nft-container-background"></div>
                                     <div className="monkey-active-nft-container-inner">
                                         <div className="monkey-active-nft-container-image">
-                                            <img style={{ width: '100%', height: '100%' }} src={monkey4}></img>
+                                            <img style={{ width: '100%', height: '100%' }} src={nft.picture}></img>
                                         </div>
                                         <div className="monkey-active-nft-container-card-info">
                                             <div className="monkey-active-nft-card-info-line" style={{ height: '30%' }}>
