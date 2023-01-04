@@ -8,9 +8,13 @@ import monkeysHeader from '../../assets/images/header_monkeys.png'
 
 
 
-function Header() {
+function Header(props) {
 
     const [searchFocusState, searchFocusHandler] = useState(false);
+    const setUserHandler = (state) => {
+        console.log(props)
+        props.userModeSetter(state);
+     };
 
     return (
         <div className="complete-header-container">
@@ -33,7 +37,7 @@ function Header() {
             <div>
                 <a><img className="header-logo" src={astronaut}></img></a>
                 <a><img className="header-logo" src={cart}></img></a>
-                <a><img className="header-logo" src={profile}></img></a>
+                <a><img onClick={() => setUserHandler(!props.userModeOn)} className="header-logo" src={profile}></img></a>
             </div>
             </div>
         </div>

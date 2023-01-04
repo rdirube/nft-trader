@@ -1,15 +1,29 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import "./trade-room.css"
 import profile from '../../../../assets/images/user1_profile.png'
 import door from '../../../../assets/images/door.png'
-import { height } from "@mui/system"
 import TradeRoomActive from './trade-room-active/trade-room-active'
-
+import nftsToChoose from '../../../body/tabs/items/itemsList'
+import coloursToChoose from './trade-room-active/aux-pics-avaiable'
 
 function TradeRoom() {
 
     const [createRoomChart, createChartOn] = useState(false);
     const [tradeRoomActiveOn, tradeRoomActiveSwitch] = useState(false);
+    const [coloursOnTrade, setColoursOnTrade] = useState([]);
+    const [monkeysOnTrade, setMonkeysOnTrade] = useState([])
+
+    useEffect(() => {
+       let monkeyPics = nftsToChoose.map((nft) => nft.picture).slice(0,10);
+       console.log(nftsToChoose)
+       setMonkeysOnTrade(monkeyPics)
+       let colours = coloursToChoose.map((col) => col.picture)
+       let coloursToShow = [];
+       for(let i = 0; i < 10; i++) {
+        coloursToShow.push(colours[Math.floor( Math.random() * 5)])
+       }
+       setColoursOnTrade(coloursToShow)
+    }, [])
 
 
     return (
@@ -38,14 +52,34 @@ function TradeRoom() {
                     </div>
                     <div className="exchange-container">
                         <div className="exchange-inner-container">
-                            <div className="exchange-nfts-container"></div>
+                            <div className="exchange-nfts-container">
+                               {
+                                monkeysOnTrade.map((mon) => {
+                                    return(
+                                        <div className="small-image-container" style={{width:'100%', height:'100%'}}> 
+                                            <img style={{width:'3vw', borderRadius:'10px'}} src={mon}></img>
+                                        </div>
+                                    )
+                                })
+                               }
+                            </div>
                             <div className="exchange-arrows"></div>
-                            <div className="exchange-nfts-container"></div>
+                            <div className="exchange-nfts-container">
+                            {
+                                coloursOnTrade.map((col) => {
+                                    return(
+                                        <div className="small-image-container"> 
+                                            <img src={col} style={{width:'3vw', borderRadius:'10px'}}></img>
+                                        </div>
+                                    )
+                                })
+                               }
+                            </div>
                         </div>
                     </div>
                     <div className="enter-container">
-                        <div className="enter-inner-container">
-                            <div className="enter-content-container">
+                        <div className="enter-inner-container" >
+                            <div className="enter-content-container" onClick={() => tradeRoomActiveSwitch(true)}>
                                 <div style={{ width: '100%', height: '70%' }}>
                                     <img style={{ width: '100%', height: '100%' }} src={door}></img>
                                 </div>
