@@ -9,7 +9,6 @@ function Body() {
     <div className="body-container">
       <Buy></Buy>
       <Table></Table>
-
     </div>
 
   )

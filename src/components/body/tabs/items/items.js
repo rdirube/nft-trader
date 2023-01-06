@@ -4,9 +4,9 @@ import refresh from '../../../../assets/images/refresh.png'
 import tick from '../../../../assets/images/tick.png'
 import { useEffect } from "react";
 import monkeysAvaiable from "./itemsList";
-import pc from '../../../../assets/images/monkey_1.png'
-
-
+import symbol1 from '../../../../assets/images/certificate_03.png'
+import symbol2 from '../../../../assets/images/certificate_02.png'
+import itemFramework from '../../../../assets/images/item_NFT.png'
 
 
 function Items() {
@@ -51,6 +51,8 @@ function Items() {
                     <div className="cards-container" > {
                         monkeysToShow.map(monkey => {
                             return (<div className="card-container">
+                                <img className="item-framework" src={itemFramework}>
+                                </img>
                                 <div className="card">
                                     <div className="card-img-container">
                                         <img className="img" src={monkey.picture}></img>
@@ -58,18 +60,43 @@ function Items() {
                                     <div className="card-info-f-container">
                                         <div className="card-info-container">
                                             <div className="info-section">
-                                                <span className="info-text">MONKEEZ <img style={{ width: '1vw' }} src={tick}></img></span>
+                                                <div>
+                                                    <span className="info-text">MONKEEZ <img style={{ width: '1vw' }} src={tick}></img></span>
+                                                </div>
+                                                <div>
+                                                    <img src={symbol2}></img>
+                                                </div>
                                             </div>
                                             <div className="info-section" style={{ marginBottom: '0.5vw' }}>
                                                 <span>MONKEEZ {monkey.name} </span>
                                             </div>
                                             <div className="info-section" style={{ marginBottom: '0.2vw' }}>
-                                                <span className="info-text"> {monkey.lastSold === '-' ? '' : 'Last Sold'}</span>
+                                                <div>
+                                                {
+                                                    monkey.lastSold !== '-' && 
+                                                    <div>
+                                                   <span className="info-text">Last Sold</span>
+                                                    </div>
+                                                }  
+                                                </div>                                                
+                                                <div>
                                                 <span className="info-text">Price</span>
+                                                </div>                                           
                                             </div>
                                             <div className="info-section">
-                                                <span style={{ color: 'white' }}>{monkey.lastSold === '-' ? '' : monkey.lastSold}</span>
-                                                <span style={{ color: 'white' }}>{monkey.price}</span>
+                                            <div>
+                                            {
+                                               monkey.lastSold !== '-' &&  
+                                                <div>  
+                                                      <img className="symbol-image" src={symbol1}></img>
+                                                    <span style={{ color: 'white' }}>{monkey.lastSold}</span>
+                                                </div>                              
+                                            }
+                                              </div>
+                                               <div>
+                                                    <img className="symbol-image" src={symbol1}></img>
+                                                    <span style={{ color: 'white' }}>{monkey.price}</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

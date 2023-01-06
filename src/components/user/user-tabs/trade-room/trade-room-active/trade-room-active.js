@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "./trade-room-active.css"
-
 import avaiableNfts from "./nfts-avaiable"
-import inTableNfts from './nfts-avaiable'
 import table from '../../../../../assets/images/table.png';
 import table2 from '../../../../../assets/images/table2.png'
 import TradeUserPanel from "./trade-user-panel/trade-user-panel"

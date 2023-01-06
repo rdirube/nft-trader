@@ -17,6 +17,7 @@ function Table() {
         setValue(newValue)
     }
 
+
     return (
     <>
         <div className="tabs-container">

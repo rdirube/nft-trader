@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import "./buy.css"
-import lupita from '../../../assets/images/lupita.png'
+import lupita from '../../../assets/images/lupita.png';
 import { useState } from "react";
+import buyFloorButton from '../../../assets/images/btn_Buy.png';
 
 function Buy() {
 
@@ -16,12 +17,11 @@ function Buy() {
                     <img style={{ width: '1.3vw', height: '1.3vw' , cursor:'pointer'}} src={lupita}></img>
                 </div>
             </div>
+            <div className="button-container">
+                 <img src={buyFloorButton} style={{ width:'13vw',  height:'5vw'}}></img>
+            </div>
             <div className="blue-div">
-                <div className="buy-content">
-                    <div className="button-container">
-                        <button className="buy-button">Buy the floor</button>
-                    </div>
-
+                <div className="buy-content">                 
                     <div className="buy-options">
                         <select className="select-option" name="select-1">
                             <option selected value="value1">Option 1</option>

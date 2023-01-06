@@ -44,12 +44,19 @@
     height:3vw;
     font-family: Poppins;
     font-weight: 600;
+    
 }
 
 .button-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    position: absolute;
+    z-index: 1000;
+    transform: translateY(3vw);
+    width:13%;
+    cursor: pointer;
+    
 }
 
 
@@ -68,7 +75,7 @@
     padding: 8px 3px 5px 5px;
     border-bottom:1px solid white; 
     opacity:1;
-    transform: translateY(9vw);
+    transform: translateY(10vw);
     position:absolute;
     z-index: 2000;
     display: flex;  
@@ -80,7 +87,7 @@
 
 .buy-options {
     font-family: Poppins;
-    transform: translateY(7vw);
+    transform: translateY(11.5vw);
     display: flex;
     justify-content: start;
     margin-bottom: 2.2vw;

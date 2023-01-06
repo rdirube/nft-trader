@@ -2,10 +2,10 @@ import React , {useState} from "react";
 import "./header.css"
 import astronaut from '../../assets/images/astronaut.png'
 import cart from '../../assets/images/cart.png'
-import profile from '../../assets/images/profile.png'
+import profile from '../../assets/images/profile_ico.png'
 import lupita from '../../assets/images/lupita.png'
 import monkeysHeader from '../../assets/images/header_monkeys.png'
-
+import nftTraderLogo from '../../assets/images/NFTraderLogo.png'
 
 
 function Header(props) {
@@ -20,7 +20,8 @@ function Header(props) {
         <div className="complete-header-container">
          <div className="header-container">
             <div style={{width:'90%', display:'flex', justifyContent:'space-between' , alignItems:'center'}}>
-            <div>
+            <div style={{transform: 'translateY(-0.8vw)'}}>
+                <img src={nftTraderLogo} style={{marginRight:'1vw', transform:'translateY(1.3vw)'}}></img>
                 <span className="trader-title">NFT TRADER</span>
             </div>
             <div className="searcher-container-h" style={searchFocusState ? {borderBottom: '1px solid #329DFF'} : {borderBottom: '1px solid #FFFFFF'}}>
