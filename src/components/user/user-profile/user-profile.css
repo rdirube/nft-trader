@@ -16,7 +16,14 @@
     position: absolute;
     z-index: 1000;
     left: 10%;
-    top: 27%;
+    top: 17vw;
+}
+
+
+.profile-part-1-line {
+    height:2vw;
+    display: flex;
+    align-items: center;
 }
 
 

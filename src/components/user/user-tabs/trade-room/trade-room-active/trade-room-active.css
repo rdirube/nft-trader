@@ -34,13 +34,41 @@
         width: 100%;
     }
 
+    .arrow-container {
+        width: 6%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arrow-container-r {
+        width: 6%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(180deg);
+    }
+
     .monkey-trade-active-user-outer {
         width: 36%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
 
+    .monkey-card-outer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .exchange-arrow-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .monkey-trade-active-user {
@@ -68,7 +96,7 @@
 
     .monkey-trade-active-nft {
         width: 65%;
-        height: 90%;
+        height: 95%;
         display: flex;
     }
 
@@ -89,7 +117,7 @@
 
     .monkey-active-nft-container {
         width: 10vw;
-        height: 90%;
+        height: 93%;
         position: relative;
         display: flex;
         justify-content: center;
@@ -179,15 +207,24 @@
     .trade-table-chat-container {
         position: absolute;
         height: 58vw;
-        width:23vw;
-        z-index:1000;
-        background-color: #181818;
+        width:23vw;    
         right:7%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
+
+    .trade-chat-inner-container {
+        width: 95%;
+        height:95%;
+        z-index:1000;
+        background-color: #181818;
+        position:absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .chat-placeholder {
         color: #757575;

@@ -21,7 +21,7 @@ function Header(props) {
          <div className="header-container">
             <div style={{width:'90%', display:'flex', justifyContent:'space-between' , alignItems:'center'}}>
             <div style={{transform: 'translateY(-0.8vw)'}}>
-                <img src={nftTraderLogo} style={{marginRight:'1vw', transform:'translateY(1.3vw)'}}></img>
+                <img src={nftTraderLogo} style={{marginRight:'1vw', transform:'translateY(1.6vw)'}}></img>
                 <span className="trader-title">NFT TRADER</span>
             </div>
             <div className="searcher-container-h" style={searchFocusState ? {borderBottom: '1px solid #329DFF'} : {borderBottom: '1px solid #FFFFFF'}}>
@@ -30,12 +30,12 @@ function Header(props) {
               <img src={lupita} ></img>
               </div>
             </div>
-            <div style={{display:'flex', transform:'translateX(-30%)'}}>
+            <div style={{display:'flex', transform:'translateX(-5%)'}}>
                 <a className="header-opt" >Marketplace</a>
                 <a className="header-opt">Ranking</a>
                 <a className="header-opt">Blog</a>
             </div>
-            <div>
+            <div style={{transform:'translateX(2vw)'}}>
                 <a><img className="header-logo" src={astronaut}></img></a>
                 <a><img className="header-logo" src={cart}></img></a>
                 <a><img onClick={() => setUserHandler(!props.userModeOn)} className="header-logo" src={profile}></img></a>

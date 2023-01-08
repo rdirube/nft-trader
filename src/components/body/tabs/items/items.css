@@ -31,10 +31,11 @@
 .list-option {
     background-color: #073662;
     border:none;
-    width:10vw;  
+    width:11vw;  
     color:white;
     font-family: Poppins;
     font-size: 1vw;
+    margin-left: 0.7vw;
 }
 
 .cards-f-container {
@@ -91,16 +92,17 @@
 
 
 .img {
-    width:75%;
+    width:80%;
     height: 90%;
 }
 
 .card-info-f-container {
     display: flex;
     width:100%;
-    height:70%;
+    height:40%;
     justify-content: center;
-    align-items: center;  
+    align-items: center; 
+    transform: translateY(-0.7vw); 
 }
 
 .card-info-container {
@@ -116,6 +118,7 @@
 .info-section {
     width:100%;
     display: flex;
+    height:1.5vw;
     justify-content: space-between;
 }
 

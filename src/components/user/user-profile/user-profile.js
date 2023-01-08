@@ -18,13 +18,13 @@ function UserProfile() {
             </div>
             <div className="profile-part-1">
                 <div className="profile-part-1-info">
-                    <div>
+                    <div className="profile-part-1-line">
                         <span className="username" >User Profile</span>
                     </div>
-                    <div>
+                    <div className="profile-part-1-line">
                         <span style={{ fontSize: '0.85vw' }}>0xc97...34f8</span> <img src={copy} style={{ width: '1vw', marginLeft: '5px', cursor: 'pointer', transform:'translateY(0.2vw)' }}></img>
                     </div>
-                    <div>
+                    <div className="profile-part-1-line">
                         <span style={{ fontSize: '0.85vw' }}>Joined October 2022</span>
                     </div>
                 </div>

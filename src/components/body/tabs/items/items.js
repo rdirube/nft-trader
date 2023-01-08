@@ -51,6 +51,7 @@ function Items() {
                     <div className="cards-container" > {
                         monkeysToShow.map(monkey => {
                             return (<div className="card-container">
+                                
                                 <img className="item-framework" src={itemFramework}>
                                 </img>
                                 <div className="card">
@@ -64,11 +65,11 @@ function Items() {
                                                     <span className="info-text">MONKEEZ <img style={{ width: '1vw' }} src={tick}></img></span>
                                                 </div>
                                                 <div>
-                                                    <img src={symbol2}></img>
+                                                    <img style={{width:'1.2vw'}} src={symbol2}></img>
                                                 </div>
                                             </div>
-                                            <div className="info-section" style={{ marginBottom: '0.5vw' }}>
-                                                <span>MONKEEZ {monkey.name} </span>
+                                            <div className="info-section" style={{ marginBottom: '0.1vw' }}>
+                                                <span style={{fontSize:'1.3vw'}}>MONKEEZ {monkey.name} </span>
                                             </div>
                                             <div className="info-section" style={{ marginBottom: '0.2vw' }}>
                                                 <div>

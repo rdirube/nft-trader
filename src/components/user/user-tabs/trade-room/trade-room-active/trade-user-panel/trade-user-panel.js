@@ -2,16 +2,35 @@ import React, { useEffect, useState } from "react";
 import '../trade-room-active.css'
 import tick from '../../../../../../assets/images/tick.png'
 import connected from '../../../../../../assets/images/connected.png'
+import sildeArrow from '../../../../../../assets/images/slideArrow_L.png'
+import MonkeyCard from "./monkey-card";
+import anime from "animejs";
+
+
 
 function TradeUserPanel(props) {
 
     const [avaiableNftsConst, avaiableNftsSetter] = useState([]);
-
+    const nftContainer = document.getElementsByClassName('monkey-trade-active-nft-container');
+    const [actualNftContainerPos, setActualPos] = useState(12);
 
     useEffect(() => {
         avaiableNftsSetter(props.cards);
 
     }, []);
+
+
+    function moveArrow(number, isForward) {
+        setActualPos(actualNftContainerPos + (isForward ? number : -number));
+        let distanceToPx = (document.documentElement.clientWidth * actualNftContainerPos) / 100
+        console.log(distanceToPx, nftContainer[0].offsetWidth, isForward)
+        anime({
+            targets: nftContainer,
+            translateX: isForward ? Math.max(-distanceToPx, -nftContainer[0].offsetWidth) : Math.min(0, -distanceToPx),
+            duration: 300,
+            easing: 'linear'
+        })
+    }
 
 
     return (
@@ -38,39 +57,16 @@ function TradeUserPanel(props) {
                 </div>
             </div>
             <div className="monkey-trade-active-nft">
-                <div style={{ width: '6%', cursor: 'pointer' }}>
+                <div className="arrow-container" style={{ width: '6%', cursor: 'pointer' }}>
+                    <img src={sildeArrow} onClick={() => moveArrow(12, false)} style={{ width: '5vw', transform: 'translate(-1vw,-1vw)' }}></img>
                 </div>
                 <div className="monkey-trade-active-nft-outer-container">
                     <div className="monkey-trade-active-nft-container">
                         {
                             avaiableNftsConst.map((nft) => {
                                 return (
-                                    <div className="monkey-active-nft-container">
-                                        <div className="monkey-active-nft-container-background"></div>
-                                        <div className="monkey-active-nft-container-inner">
-                                            <div className="monkey-active-nft-container-image">
-                                                <img style={{ width: '100%', height: '100%' }} src={nft.picture}></img>
-                                            </div>
-                                            <div className="monkey-active-nft-container-card-info">
-                                                <div className="monkey-active-nft-card-info-line" style={{ height: '30%' }}>
-                                                    <div>
-                                                        <span style={{ color: '#BDBDBD', fontSize: '0.7vw' }}>MONKEEZ</span>
-                                                        <img style={{ width: '0.8vw', marginLeft: '5px' }} src={tick}></img>
-                                                    </div>
-                                                </div>
-                                                <div className="monkey-active-nft-card-info-line" style={{ height: '30%' }}>
-                                                    <span style={{ fontSize: '1vw' }}>MONKEEZ #<span style={{ fontSize: '1vw' }}>{nft.name}</span></span>
-                                                </div>
-                                                <div className="monkey-active-nft-card-info-line" style={{ alignItems: 'center', height: '40%' }}>
-                                                    <div>
-                                                        <span style={{ color: '#BDBDBD', fontSize: '0.9vw' }}>Price</span>
-                                                    </div>
-                                                    <div>
-                                                        <span style={{ fontSize: '1.6vw' }}>{nft.price}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="monkey-card-outer-container">
+                                        <MonkeyCard nft={nft}></MonkeyCard>
                                     </div>
                                 )
                             })
@@ -78,7 +74,8 @@ function TradeUserPanel(props) {
 
                     </div>
                 </div>
-                <div style={{ width: '6%', cursor: 'pointer' }}>
+                <div className="arrow-container-r" onClick={() => moveArrow(12, true)}>
+                    <img src={sildeArrow} style={{ width: '5vw', transform: 'translateY(1.9vw)' }}></img>
                 </div>
             </div>
         </div>

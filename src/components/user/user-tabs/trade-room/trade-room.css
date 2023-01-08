@@ -42,24 +42,20 @@
 
 
 .create-room-button {
-    width: 14vw;
-    height: 4vw;
-    font-size: 1.3vw;
-    background-color: black;
-    color: white;
-    border: none;
-    font-weight: 600;
+    width: 16vw;
+    height: 5.8vw;
     cursor: pointer;
 }
 
 
 .trade-room-container {
-    margin: 3vw 0;
-    width: 100%;
-    height: 12vw;
-    background-color: blueviolet;
+    position: absolute;
+    width: 96%;
+    height: 81%;
     display: grid;
     grid-template-columns: 35% 50% 15%;
+    z-index: 3000;
+    transform: translateY(-0.3vw);
 }
 
 .trade-user-container {
@@ -111,7 +107,22 @@
     width: 100%;
 }
 
+.trade-room-outer-container {
+    margin: 3vw 0;
+    width: 100%;
+    height: 14vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+
+.rooms-background{
+    position: absolute;
+    width: 100%;
+    height:100%;
+}
 
 .exchange-container {
     background-color: #414141;
@@ -165,11 +176,12 @@
     height: 80%;
     width: 50%;
     cursor: pointer;
+    transform: translateX(0.4vw);
 }
 
 .full-chart-container {
     position: absolute;
-    z-index:1500;
+    z-index:3500;
     width: 100%;
     height:160vw;
     top:0;
@@ -190,13 +202,19 @@
     
 }
 
+.modal{
+    position: absolute;
+    width: 100%;
+    height:100%;
+}
+
 
 .charton {
     position: fixed;
     top: 25%;
     left: 33%;
-    width: 35vw;
-    height:21vw;
+    width: 38vw;
+    height:25vw;
     background-color: #181818;
     z-index: 20000;
     display: flex;
@@ -207,9 +225,10 @@
 
 .inner-charton {
   width: 75%;
-  height:80%;
+  height:73%;
   display: grid;
   grid-template-rows: 30% 40% 30% ;
+  z-index: 50;
   
 }
 
@@ -254,8 +273,8 @@
 
 
 .option-button {
-    width:7vw;
-    height: 2.5vw;
+    width:8vw;
+    height: 3vw;
     border:none;
     cursor:pointer;
 }
@@ -264,6 +283,6 @@
 
 .x-charton {
   font-family: Pixeled;
-  font-size: 1.2vw;
+  width: 1.5vw;
 }
 

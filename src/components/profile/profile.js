@@ -65,7 +65,7 @@ function Profile() {
                <span className="info">Total Sales Volume</span>
             </div>
          </div>
-         <div style={{ position: 'absolute', right: '6%', top: '40%' }}>
+         <div style={{ position: 'absolute', right: '6%', top: '20.5vw' }}>
             <img style={{ width: '1.2vw', cursor: 'pointer' }} src={share}></img>
          </div>
       </div>
