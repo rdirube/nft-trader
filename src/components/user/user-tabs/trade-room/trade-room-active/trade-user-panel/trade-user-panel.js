@@ -12,25 +12,36 @@ function TradeUserPanel(props) {
 
     const [avaiableNftsConst, avaiableNftsSetter] = useState([]);
     const nftContainer = document.getElementsByClassName('monkey-trade-active-nft-container');
-    const [actualNftContainerPos, setActualPos] = useState(12);
+    const nftOuterContainer = document.getElementsByClassName('monkey-trade-active-nft-outer-container');
+    let actualNftContainerPos = 0;
 
     useEffect(() => {
         avaiableNftsSetter(props.cards);
-
     }, []);
 
 
-    function moveArrow(number, isForward) {
-        setActualPos(actualNftContainerPos + (isForward ? number : -number));
-        let distanceToPx = (document.documentElement.clientWidth * actualNftContainerPos) / 100
-        console.log(distanceToPx, nftContainer[0].offsetWidth, isForward)
-        anime({
-            targets: nftContainer,
-            translateX: isForward ? Math.max(-distanceToPx, -nftContainer[0].offsetWidth) : Math.min(0, -distanceToPx),
-            duration: 300,
-            easing: 'linear'
-        })
+    function vwToPx(number) {
+        return (document.documentElement.clientWidth * number) / 100
     }
+
+
+    function moveArrow(number, isForward) {
+        const numberInPx = vwToPx(number);
+        if ((isForward && ((actualNftContainerPos + nftOuterContainer[props.panel].offsetWidth < nftContainer[props.panel].offsetWidth))) || !isForward) {
+            if (isForward) {
+                actualNftContainerPos += ((nftContainer[props.panel].offsetWidth < actualNftContainerPos + numberInPx) ? nftContainer[props.panel].offsetWidth - nftOuterContainer[0].offsetWidth : numberInPx)
+            } else {
+                actualNftContainerPos -= ((0 < actualNftContainerPos - numberInPx ? numberInPx : actualNftContainerPos))
+            }
+            anime({
+                targets: nftContainer,
+                translateX: -actualNftContainerPos,
+                duration: 200,
+                easing: 'linear'
+            })            
+        }
+    }
+    
 
 
     return (

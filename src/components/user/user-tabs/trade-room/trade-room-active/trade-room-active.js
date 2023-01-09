@@ -11,6 +11,8 @@ import MonkeyCard from "./trade-user-panel/monkey-card";
 import tradeArrow from '../../../../../assets/images/tradeArrow_L.png'
 import chatContainer from '../../../../../assets/images/chat_BG.png'
 
+
+
 function TradeRoomActive() {
 
 
@@ -20,7 +22,6 @@ function TradeRoomActive() {
 
 
     useEffect(() => {
-
         let nftToSet = avaiableNfts.slice(0, 5);
         inTableNftsSetter(nftToSet);
         let letNftAux = auxPictures.slice(0, 3);
@@ -31,7 +32,7 @@ function TradeRoomActive() {
 
     return (
         <div className="trade-room-active-container">
-            <TradeUserPanel profilePic={monkey4} cards={avaiableNfts}></TradeUserPanel>
+            <TradeUserPanel panel={0} profilePic={monkey4} cards={avaiableNfts} key={'upper'}></TradeUserPanel>
             <div className="trade-table-outer-container">
                 <div className="trade-table-container">
                     <div className="trade-table-image-container">
@@ -78,7 +79,7 @@ function TradeRoomActive() {
                     </div>
                 </div>
             </div>
-            <TradeUserPanel profilePic={auxProfile} cards={auxPictures}></TradeUserPanel>
+            <TradeUserPanel  panel={1} profilePic={auxProfile} cards={auxPictures} key={'down'}></TradeUserPanel>
         </div>
 
     )
